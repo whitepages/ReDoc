@@ -26,6 +26,7 @@ export * from './Responses/ResponsesList';
 export * from './Responses/ResponseTitle';
 export * from './ResponseSamples/ResponseSamples';
 export * from './PayloadSamples/PayloadSamples';
+export { MimeLabel as PayloadMimeLabel } from './PayloadSamples/styled.elements';
 export * from './MediaTypeSwitch/MediaTypesSwitch';
 
 export * from './ErrorBoundary';
