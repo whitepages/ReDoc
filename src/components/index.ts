@@ -34,4 +34,3 @@ export * from './StoreBuilder';
 export * from './OptionsProvider';
 export * from './SideMenu/';
 export * from './StickySidebar/StickyResponsiveSidebar';
-export * from './SearchBox/SearchBox';
