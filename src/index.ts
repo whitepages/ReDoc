@@ -7,6 +7,7 @@ export {
   MiddlePanel,
   MimeLabel,
   NullableLabel,
+  OneOfLabel,
   PatternLabel,
   PrismDiv,
   PropertyBullet,
@@ -21,6 +22,7 @@ export {
   ShelfIcon,
   Tabs,
   TypeName,
+  TypePrefix,
 } from './common-elements/';
 export * from './services';
 export * from './utils';
