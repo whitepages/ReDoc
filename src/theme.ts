@@ -105,6 +105,7 @@ const defaultTheme: ThemeInterface = {
     headings: {
       fontFamily: 'Montserrat, sans-serif',
       fontWeight: '400',
+      lineHeight: '1.6em',
     },
     code: {
       fontSize: '13px',
@@ -125,6 +126,10 @@ const defaultTheme: ThemeInterface = {
     width: '260px',
     backgroundColor: '#fafafa',
     textColor: '#333333',
+    activeTextColor: theme =>
+      theme.menu.textColor !== defaultTheme.menu!.textColor
+        ? theme.menu.textColor
+        : theme.colors.primary.main,
     groupItems: {
       textTransform: 'uppercase',
     },
@@ -139,6 +144,7 @@ const defaultTheme: ThemeInterface = {
   logo: {
     maxHeight: ({ menu }) => menu.width,
     maxWidth: ({ menu }) => menu.width,
+    gutter: '2px',
   },
   rightPanel: {
     backgroundColor: '#263238',
@@ -166,7 +172,7 @@ export function resolveTheme(theme: ThemeInterface): ResolvedThemeInterface {
               counter++;
               if (counter > 1000) {
                 throw new Error(
-                  `Theme probably contains cirucal dependency at ${currentPath}: ${val.toString()}`,
+                  `Theme probably contains circular dependency at ${currentPath}: ${val.toString()}`,
                 );
               }
 
@@ -281,6 +287,7 @@ export interface ResolvedThemeInterface {
     headings: {
       fontFamily: string;
       fontWeight: string;
+      lineHeight: string;
     };
 
     links: {
@@ -293,6 +300,7 @@ export interface ResolvedThemeInterface {
     width: string;
     backgroundColor: string;
     textColor: string;
+    activeTextColor: string;
     groupItems: {
       textTransform: string;
     };
@@ -307,6 +315,7 @@ export interface ResolvedThemeInterface {
   logo: {
     maxHeight: string;
     maxWidth: string;
+    gutter: string;
   };
   rightPanel: {
     backgroundColor: string;

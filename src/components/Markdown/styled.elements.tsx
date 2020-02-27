@@ -70,7 +70,7 @@ export const StyledMarkdownBlock = styled(PrismDiv as StyledComponent<
     font-family: ${props => props.theme.typography.code.fontFamily};
     border-radius: 2px;
     border: 1px solid rgba(38, 50, 56, 0.1);
-    padding: 0.1em 0.25em 0.2em;
+    padding: 0 ${({ theme }) => theme.spacing.unit}px;
     font-size: ${props => props.theme.typography.code.fontSize};
     font-weight: ${({ theme }) => theme.typography.code.fontWeight};
 
@@ -82,7 +82,7 @@ export const StyledMarkdownBlock = styled(PrismDiv as StyledComponent<
     white-space:${({ theme }) => (theme.typography.code.wrap ? 'pre-wrap' : 'pre')};
     background-color: #263238;
     color: white;
-    padding: 12px 14px 15px 14px;
+    padding: ${props => props.theme.spacing.unit * 4}px;
     overflow-x: auto;
     line-height: normal;
     border-radius: 0px
