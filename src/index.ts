@@ -8,6 +8,7 @@ export {
   MimeLabel,
   NullableLabel,
   OneOfLabel,
+  OneOfButton as StyledOneOfButton,
   PatternLabel,
   PrismDiv,
   PropertyBullet,
